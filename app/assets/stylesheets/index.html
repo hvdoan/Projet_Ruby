@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>TestBlog</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="csrf-param" content="authenticity_token" />
+    <meta name="csrf-token" content="JvWp6oqgxUexoOB61zOlnEkxQzwBhdzg55pim3HoGKmuW_cx00GMypNIeJrScmaPeqvhR3pUzBtAsOjTcqoJbQ" />
+
+
+    <link rel="stylesheet" href="style.css">
+    <script src="/packs/js/application-2c07a637ff250cc2eac8.js" data-turbolinks-track="reload"></script>
+</head>
+
+<body>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>CO2</title>
+    <link rel="stylesheet" href="/app/assets/stylesheets/style.css">
+</head>
+</html>
+
+<body id="home">
+    <header class="header">
+        <a href="/home" style="background-image: image-url('background.jpg')"><img src="../images/logo.png"/></a>
+        <nav class="menu">
+            <li><a class="item" href="/home">home</a></li>
+            <li><span class="item">Se connecter</span></li>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <header>
+                <h1>Calculer les émissions de carbone de vos trajets</h1>
+
+                <p>
+                    Vous vous demandez quel mode de transport émet le moins de CO2 ? Ce calculateur compare le vélo, la voiture, le train et l'avion en fonction du nombre de kilomètres à réaliser.
+                </p>
+            </header>
+
+            <form class="form" action="/home" accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token" value="_STotpiou3uHM3xOtWe710xDZOkQ_mP1N48hnszZDdmryvgE1B6BZ5eaJiSoVEEdAnlcRzBGX7sss90z0MRKHQ" />
+                <div class="field-row">
+                    <div class="field">
+                        <label for="distance">Indiquez votre distance (km)</label>
+                        <input type="text" name="distance" id="distance" />
+                    </div>
+
+                    <div class="field">
+                        <label>Transport utilisé</label>
+                        <select name='transport'>
+                            <option value='1'>
+                                Vélo (ou trottinette) à assistance électrique : 0.002
+                            </option>
+                            <option value='2'>
+                                Métro : 0.003
+                            </option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="field-cta">
+                    <input class="btn-submit" type="submit" name="commit" value="Calculer" data-disable-with="Calculer" />
+                </div>
+            </form>
+        </section>
+    </main>
+</body>
+
+<script async nonce="" type="text/javascript" id="mini-profiler" src="/mini-profiler-resources/includes.js?v=35a79b300ab5afa978cb59af0b05e059" data-css-url="/mini-profiler-resources/includes.css?v=35a79b300ab5afa978cb59af0b05e059" data-version="35a79b300ab5afa978cb59af0b05e059" data-path="/mini-profiler-resources/" data-current-id="haul7r9vo0tbahc09w3g" data-ids="haul7r9vo0tbahc09w3g,wh7rruo6ozy0osgc1528,6stcl6g8fb57d5vwf1m7,10d08wh3wl4p6km68u4s" data-horizontal-position="left" data-vertical-position="top" data-trivial="false" data-children="false" data-max-traces="20" data-controls="false" data-total-sql-count="false" data-authorized="true" data-toggle-shortcut="alt+p" data-start-hidden="false" data-collapse-results="true" data-html-container="body" data-hidden-custom-fields="" data-turbo-permanent="false"></script>
+</body>
+</html>

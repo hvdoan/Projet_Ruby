@@ -1,0 +1,87 @@
+@use "../abtract" as *;
+
+.form
+{
+    display: flex;
+    flex-direction: column;
+
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+
+    & .field-row
+    {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        margin-bottom: 10px;
+        padding: 20px;
+    }
+
+    & .field
+    {
+        display: flex;
+        flex-direction: column;
+
+        & > label
+        {
+            width: 100%;
+            margin-bottom: 5px;
+
+            color: $blue1;
+
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        & > input
+        {
+            padding: 5px;
+
+            background: $dark-white;
+            border: none;
+
+            &:focus
+            {
+                outline: none;
+            }
+        }
+
+        & > select
+        {
+            padding: 5px;
+        }
+    }
+
+    & .field-cta
+    {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+
+        padding: 20px;
+
+        background: $dark-white;
+
+        & > .btn-submit
+        {
+            padding: 5px 10px;
+
+            background: $blue1;
+            color: $white;
+            border: solid 2px $blue1;
+            border-radius: 7px;
+
+            font-weight: bold;
+
+            transition: .3s;
+            cursor: pointer;
+
+            &:hover
+            {
+                background: $white;
+                color: $blue1;
+                transition: .3s;
+            }
+        }
+    }
+}

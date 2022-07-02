@@ -26,24 +26,18 @@
                 </p>
             </header>
 
-            <%= form_with url: {action: "calculateCo2"}, html: {class: "form"} do |form| %>
+            <%= form_with url: {action: "addTransport"}, html: {class: "form"} do |form| %>
                 <div class="field-row">
                     <div class="field">
-                        <%= form.label :distance, "Indiquez votre distance (km)" %>
-                        <%= form.text_field :distance %>
+                        <%= form.label :name, "Indiquez le nom du véhicule" %>
+                        <%= form.text_field :name %>
                     </div>
                 </div>
 
                 <div class="field-row">
                     <div class="field">
-                        <label>Transport utilisé</label>
-                        <select name='transport'>
-                            <% @transports.each do |transport| %>
-                                <option value='<%= transport.id %>'>
-                                    <%= transport.name %> : <%= transport.co2 %>
-                                </option>
-                            <% end %>
-                        </select>
+                        <%= form.label :consumption, "Indiquez la consommation du véhicule pour 1 km" %>
+                        <%= form.text_field :consumption %>
                     </div>
                 </div>
 

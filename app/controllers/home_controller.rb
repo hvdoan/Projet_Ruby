@@ -4,9 +4,9 @@ class HomeController < ApplicationController
     end
 
     def calculateCo2
-        transport = Transport.find(params[:transport])
+        transport   = Transport.find(params[:transport])
 
-        @co2 = transport.co2 * params[:distance].to_i
+        @co2        = transport.co2 * params[:distance].to_i
 
         render :calculate_co2, status: :ok
     end

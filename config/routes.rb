@@ -3,7 +3,13 @@ Rails.application.routes.draw do
 
     root "home#index"
 
+    get "/", to: "home#index"
+
     get "/home", to: "home#index"
 
     post "/home", to: "home#calculateCo2"
+
+    get "/transport", to: "transport#transport"
+
+    post "/transport", to: "transport#addTransport"
 end
