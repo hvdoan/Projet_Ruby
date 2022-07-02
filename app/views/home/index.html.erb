@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>CO2</title>
+        <link rel="stylesheet" href="../../app/assets/stylesheets/style.css">
+    </head>
+</html>
+
+<body id="home">
+    <header class="header">
+        <a href="/home"><%= image_tag 'logo.png', alt: 'logo' %></a>
+        <nav class="menu">
+            <li><a class="item" href="/home">home</a></li>
+            <li><a class="item" href="/transport">Ajouter un transport</a></li>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <header>
+                <h1>Calculer les émissions de carbone de vos trajets</h1>
+
+                <p>
+                    Vous vous demandez quel mode de transport émet le moins de CO2 ? Ce calculateur compare le vélo, la voiture, le train et l'avion en fonction du nombre de kilomètres à réaliser.
+                </p>
+            </header>
+
+            <%= form_with url: {action: "calculateCo2"}, html: {class: "form"} do |form| %>
+                <div class="field-row">
+                    <div class="field">
+                        <%= form.label :distance, "Indiquez votre distance (km)" %>
+                        <%= form.text_field :distance %>
+                    </div>
+                </div>
+
+                <div class="field-row">
+                    <div class="field">
+                        <label>Transport utilisé</label>
+                        <select name='transport'>
+                            <% @transports.each do |transport| %>
+                                <option value='<%= transport.id %>'>
+                                    <%= transport.name %> : <%= transport.co2 %>
+                                </option>
+                            <% end %>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="field-cta">
+                    <%= form.submit "Calculer", class: "btn-submit" %>
+                </div>
+            <% end %>
+
+            <%= @params %>
+        </section>
+    </main>
+</body>
