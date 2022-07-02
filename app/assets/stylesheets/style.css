@@ -1,0 +1,156 @@
+* {
+  font-family: Arial, sans-serif;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+}
+body > main {
+  height: 100vh;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  width: 100%;
+  padding: 5px;
+  box-sizing: border-box;
+  background: #fff;
+  border-bottom: solid 1px #ccc;
+}
+.header > a > img {
+  width: 50px;
+  height: 50px;
+}
+.header > nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.menu > li {
+  list-style: none;
+}
+.menu > li > .item {
+  display: block;
+  padding: 15px;
+  box-sizing: content-box;
+  color: #718093;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.menu > li > .item:hover {
+  color: #40739e;
+  transition: 0.3s;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+.form .field-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  padding: 20px;
+}
+.form .field {
+  display: flex;
+  flex-direction: column;
+}
+.form .field > label {
+  width: 100%;
+  margin-bottom: 5px;
+  color: #487eb0;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.form .field > input {
+  padding: 5px;
+  background: #f0f0f0;
+  border: none;
+}
+.form .field > input:focus {
+  outline: none;
+}
+.form .field > select {
+  padding: 5px;
+}
+.form .field-cta {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  padding: 20px;
+  background: #f0f0f0;
+}
+.form .field-cta > .btn-submit {
+  padding: 5px 10px;
+  background: #487eb0;
+  color: #fff;
+  border: solid 2px #487eb0;
+  border-radius: 7px;
+  font-weight: bold;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.form .field-cta > .btn-submit:hover {
+  background: #fff;
+  color: #487eb0;
+  transition: 0.3s;
+}
+
+#home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url("/assets/background.jpg");
+}
+#home > main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#home > main > section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  width: 60%;
+  min-width: 650px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  background: #fff;
+  border-radius: 7px;
+}
+#home > main > section > header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+#home > main > section > header > * {
+  text-align: center;
+}
+#home > main > section > form {
+  width: 100%;
+}
+
+/*# sourceMappingURL=style.css.map */
